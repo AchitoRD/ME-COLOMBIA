@@ -34,3 +34,10 @@ Este proyecto contiene los siguientes archivos:
 1. Clona el repositorio con el siguiente comando:
    ```bash
    git clone https://github.com/AchitoRD/ME-COLOMBIA.git
+
+   ---
+
+## 🙌 Créditos
+
+Desarrollado con ❤️ por [AchitoRD](https://github.com/AchitoRD)
+Gracias por apoyar a la comunidad de **ME COLOMBIA RP** 🇨🇴
