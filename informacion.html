@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Información - Me Colombia RP ER:LC</title>
+  <link rel="icon" type="image/png" href="https://cdn.discordapp.com/attachments/1359662313552085072/1368380752126939297/ME-COLOMBIA-NEGATIVO.png?ex=68180362&is=6816b1e2&hm=a482b20c636b348af7ab7b3a7bb41b262c3d97331aa3264dca122d673ef6ae47&">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body {
+      background: linear-gradient(160deg, #0a0a23, #0f1129);
+      color: #f0f0f0;
+      font-family: 'Orbitron', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .info-section {
+      background: radial-gradient(circle at top, #121a3e 0%, #0a0a23 100%);
+      padding: 80px 20px;
+      animation: fadeIn 2s ease-in;
+    }
+    .brand-footer {
+      color: #4fa3ff;
+      font-weight: bold;
+    }
+    .btn-accede {
+      background-color: #256eff;
+      color: #fff;
+      font-weight: 600;
+      text-transform: uppercase;
+      border-radius: 40px;
+      padding: 15px 40px;
+      font-size: 1.1rem;
+      box-shadow: 0 0 12px rgba(37, 110, 255, 0.4);
+      transition: 0.3s ease-in-out;
+      animation: pulse 2.5s infinite;
+    }
+    .btn-accede:hover {
+      background-color: #1e4ecf;
+      box-shadow: 0 0 18px rgba(37, 110, 255, 0.6);
+      transform: scale(1.05);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="https://cdn.discordapp.com/attachments/1359662313552085072/1368380752126939297/ME-COLOMBIA-NEGATIVO.png?ex=68180362&is=6816b1e2&hm=a482b20c636b348af7ab7b3a7bb41b262c3d97331aa3264dca122d673ef6ae47&" 
+                 alt="Logo Me Colombia RP" 
+                 style="height: 35px; width: auto; margin-right: 10px;">
+            <span class="neon-text">ME Colombia RP ER:LC</span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="documentacion.html">Documentación</a></li>
+            <li class="nav-item"><a class="nav-link active" href="informacion.html">Información</a></li>
+            <li class="nav-item"><a class="nav-link" href="staff.html">Staff</a></li>
+            <li class="nav-item"><a class="nav-link" href="redes.html">Redes</a></li>
+            <li class="nav-item"><a class="nav-link" href="tienda.html">Tienda</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Sección con Estilo -->
+  <section class="info-section text-center">
+    <div class="container">
+      <h2 class="mb-4">Información del Servidor</h2>
+      <p class="mb-4">
+        Bienvenido a <strong>Me Colombia RP ER:LC</strong>, una comunidad vibrante y seria de roleplay
+        dentro de <em>Liberty County: Emergency Response</em>.
+      </p>
+
+      <div class="bg-dark rounded-4 p-4 mx-auto mb-5" style="max-width: 700px;">
+        <h5 class="mb-3">¿Cómo unirte al servidor?</h5>
+        <ol class="text-start" style="max-width: 600px; margin: auto;">
+          <li>Abre el juego <strong>Liberty County: Emergency Response</strong>.</li>
+          <li>Haz clic en <strong>"SERVIDORES"</strong> y luego en <strong>"UNIRSE POR CODIGO"</strong>.</li>
+          <li>Ingresa el siguiente código personalizado:</li>
+        </ol>
+        <div class="mt-4">
+          <a href="https://www.roblox.com/games/2534724415/Emergency-Response-Liberty-County"
+             class="btn btn-accede" target="_blank">MEDELLÍN</a>
+        </div>
+        <small class="d-block mt-3 text-secondary">Te llevará directamente al juego. Luego introduce el código en la opción correspondiente.</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-3 bg-dark text-light">
+    &copy; 2025 <span class="brand-footer">Me Colombia RP ER:LC</span>. Todos los derechos reservados.
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

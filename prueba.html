@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RUNT ME Colombia RP ER:LC</title>
+  <link rel="icon" type="image/png" href="https://cdn.discordapp.com/attachments/1359662313552085072/1368380752126939297/ME-COLOMBIA-NEGATIVO.png?ex=68180362&is=6816b1e2&hm=a482b20c636b348af7ab7b3a7bb41b262c3d97331aa3264dca122d673ef6ae47&">
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <style>
+    /* Estilos minimalistas con azul, blanco y negro */
+    body {
+      background-color: #ffffff;
+      color: #0a0a0a;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .navbar-custom {
+      background: #0b1f3a;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar-brand img {
+      height: 30px;
+      margin-right: 10px;
+    }
+
+    .navbar-brand,
+    .navbar-nav .nav-link {
+      color: #ffffff !important;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #1da1f2 !important;
+    }
+
+    .banner {
+      background-color: #f5f9ff;
+      padding: 30px 0;
+      border-radius: 30px;
+      margin: 30px auto;
+      max-width: 900px;
+      text-align: center;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    .banner img {
+      height: 80px;
+    }
+
+    .nav-tabs {
+      border: none;
+      justify-content: center;
+    }
+
+    .nav-tabs .nav-link {
+      border: none;
+      background-color: transparent;
+      color: #0b1f3a;
+      font-weight: 600;
+      padding: 10px 25px;
+      border-radius: 50px;
+      transition: background-color 0.3s;
+    }
+
+    .nav-tabs .nav-link.active {
+      background-color: #0b1f3a;
+      color: #ffffff;
+    }
+
+    .tab-content {
+      background-color: #ffffff;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+    }
+
+    .form-control {
+      border-radius: 20px;
+      border: 1px solid #d0d0d0;
+    }
+
+    .btn-custom {
+      background-color: #0b1f3a;
+      color: #ffffff;
+      border-radius: 30px;
+      padding: 10px 25px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .btn-custom:hover {
+      background-color: #1a47d8;
+    }
+
+    .table thead {
+      background-color: #0b1f3a;
+      color: white;
+    }
+
+    .table td, .table th {
+      vertical-align: middle;
+    }
+
+    .modal-content {
+      border-radius: 15px;
+    }
+
+    footer.footer {
+      background-color: #0b1f3a;
+      color: white;
+      padding: 20px 0;
+      margin-top: 40px;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg" alt="Colombia" />
+        RUNT ME Colombia RP ER:LC
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">
+          <i class="bi bi-list" style="color:white;font-size:1.5rem;"></i>
+        </span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" data-bs-toggle="tab" href="#consulta">Consulta Vehicular</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#multas">Multas y Pagos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Banner -->
+  <section class="banner animate__animated animate__fadeInDown">
+    <img src="https://plc.mintransporte.gov.co/portals/0/Logo%20DITRA2.png?ver=2023-03-16-211230-567" alt="Logo Tránsito" />
+  </section>
+
+  <!-- Tabs -->
+  <div class="container my-4">
+    <ul class="nav nav-tabs animate__animated animate__fadeInDown">
+      <li class="nav-item">
+        <a class="nav-link active" data-bs-toggle="tab" href="#consulta">Consulta Vehicular</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="tab" href="#multas">Multas y Pagos</a>
+      </li>
+    </ul>
+
+    <div class="tab-content animate__animated animate__fadeInUp">
+      <!-- Consulta Vehicular -->
+      <div class="tab-pane fade show active" id="consulta">
+        <h2 class="text-center mb-4">Consulta Vehicular</h2>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="placa" class="form-label">Placa</label>
+            <input type="text" id="placa" class="form-control" placeholder="Ingresa la placa" />
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="documento" class="form-label">Documento</label>
+            <input type="text" id="documento" class="form-control" placeholder="Ingresa el documento" />
+          </div>
+        </div>
+        <div class="text-center">
+          <button class="btn btn-custom" onclick="consultarVehiculo()">Consultar</button>
+        </div>
+
+        <div id="resultadoConsulta" class="mt-5 d-none animate__animated animate__fadeInUp">
+          <h4 class="text-center mb-4">Resultado de la Consulta</h4>
+          <div class="row">
+            <div class="col-md-6">
+              <p><strong>Nombre:</strong> <span id="nombre"></span></p>
+              <p><strong>Apellido:</strong> <span id="apellido"></span></p>
+              <p><strong>Placa:</strong> <span id="placaRes"></span></p>
+            </div>
+            <div class="col-md-6">
+              <p><strong>Modelo:</strong> <span id="modelo"></span></p>
+              <p><strong>SOAT:</strong> <span id="soat"></span></p>
+              <p><strong>Tecnomecánica:</strong> <span id="tecno"></span></p>
+            </div>
+          </div>
+          <div class="text-center mt-3">
+            <button class="btn btn-custom" onclick="generarPDF()">Descargar PDF</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Multas -->
+      <div class="tab-pane fade" id="multas">
+        <h2 class="text-center mb-4">Multas y Pagos</h2>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Infracción</th>
+                <th>Fecha</th>
+                <th>Valor</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="multasBody">
+              <!-- Dinámico -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="pagoModal" tabindex="-1" aria-labelledby="pagoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="pagoModalLabel">Pago de Multa</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <p>¿Desea pagar la multa con ID: <span id="multaId"></span> por un valor de <span id="multaValor"></span>?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-custom" onclick="realizarPago()">Pagar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer text-center">
+    <div class="container">
+      <p>&copy; 2025 RUNT ME Colombia RP ER:LC</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg" style="height:20px;" alt="Bandera Colombia" />
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script>
+    const nombres = ["Carlos", "Laura", "Miguel", "Tatiana", "Andrés"];
+    const apellidos = ["Gómez", "Rodríguez", "Martínez", "Sánchez", "Moreno"];
+    const modelos = ["Mazda 3", "Renault Logan", "Toyota Corolla", "Chevrolet Spark", "Kia Rio"];
+
+    function consultarVehiculo() {
+      const placa = document.getElementById('placa').value.trim();
+      const documento = document.getElementById('documento').value.trim();
+      if (!placa || !documento) return alert("Por favor, ingresa la placa y el documento.");
+      document.getElementById('nombre').textContent = nombres[Math.floor(Math.random() * nombres.length)];
+      document.getElementById('apellido').textContent = apellidos[Math.floor(Math.random() * apellidos.length)];
+      document.getElementById('placaRes').textContent = placa;
+      document.getElementById('modelo').textContent = modelos[Math.floor(Math.random() * modelos.length)];
+      document.getElementById('soat').textContent = "Vigente ✅";
+      document.getElementById('tecno').textContent = "Vigente ✅";
+      document.getElementById('resultadoConsulta').classList.remove('d-none');
+    }
+
+    async function generarPDF() {
+      const { jsPDF } = window.jspdf;
+      const resultado = document.getElementById('resultadoConsulta');
+      const canvas = await html2canvas(resultado, { scale: 2 });
+      const imgData = canvas.toDataURL('image/png');
+      const pdf = new jsPDF();
+      const width = pdf.internal.pageSize.getWidth();
+      const height = (canvas.height * width) / canvas.width;
+      pdf.addImage(imgData, 'PNG', 0, 20, width, height);
+      pdf.save('consulta_vehicular.pdf');
+    }
+
+    const multas = [
+      { id: 1, infraccion: "Exceso de velocidad", fecha: "2025-01-15", valor: "$150.000" },
+      { id: 2, infraccion: "Estacionamiento indebido", fecha: "2025-02-10", valor: "$80.000" },
+      { id: 3, infraccion: "No respetar semáforo", fecha: "2025-03-05", valor: "$200.000" }
+    ];
+
+    function cargarMultas() {
+      const multasBody = document.getElementById('multasBody');
+      multasBody.innerHTML = "";
+      multas.forEach(multa => {
+        multasBody.innerHTML += `
+          <tr>
+            <td>${multa.id}</td>
+            <td>${multa.infraccion}</td>
+            <td>${multa.fecha}</td>
+            <td>${multa.valor}</td>
+            <td><button class="btn btn-custom btn-sm" onclick="mostrarPago(${multa.id})">Pagar</button></td>
+          </tr>`;
+      });
+    }
+
+    function mostrarPago(id) {
+      const multa = multas.find(m => m.id === id);
+      if (!multa) return;
+      document.getElementById('multaId').textContent = multa.id;
+      document.getElementById('multaValor').textContent = multa.valor;
+      const modal = new bootstrap.Modal(document.getElementById('pagoModal'));
+      modal.show();
+    }
+
+    function realizarPago() {
+      alert("Pago realizado con éxito.");
+      bootstrap.Modal.getInstance(document.getElementById('pagoModal')).hide();
+    }
+
+    document.addEventListener('DOMContentLoaded', cargarMultas);
+  </script>
+</body>
+</html>

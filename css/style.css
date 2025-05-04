@@ -1,0 +1,536 @@
+/* Fondo inicial */
+body {
+  background: linear-gradient(160deg, #0a0a23, #0f1129);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Pseudo-elemento que alterna el fondo */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://i.pinimg.com/736x/87/74/1c/87741c10fb26dc1efeeb41fbe18fbb68.jpg') 
+              no-repeat center center;
+  background-size: cover;
+  z-index: -1;
+  opacity: 0.3; /* Se inicia más visible */
+  transition: opacity 2s ease-in-out; /* Transición más suave */
+  animation: fondoAlternante 4s infinite ease-in-out;
+}
+
+/* Animación mejorada para cambiar entre la imagen y el color */
+@keyframes fondoAlternante {
+  0%, 45% {
+    opacity: 1; /* Se muestra el banner más claro */
+  }
+  55%, 100% {
+    opacity: 0.1; /* Reduce la opacidad, pero deja un leve rastro de la imagen */
+  }
+}
+
+
+/* =========================================================
+   CSS Mejorado para Comunidad de Role Play
+   Integrando Bootstrap, Animate.css, AOS, GSAP, Velocity.js, Mo.js
+   ========================================================= */
+
+/* ======================
+   Reset y Variables Globales
+====================== */
+:root {
+  --color-primary: #256eff;
+  --color-primary-dark: #1a4ccc;
+  --color-accent: #5cc9ff;
+  --color-bg-light: #0a0a23;
+  --color-bg-dark: #0f1129;
+  --color-text: #e0e0e0;
+  --font-base: 'Orbitron', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* IMPORTANTE:
+ Asegúrate de incluir en tu HTML los enlaces a las librerías de 
+ Bootstrap, Animate.css, AOS, GSAP, Velocity.js y Mo.js.
+*/
+
+/* ======================
+ Estilos Globales
+====================== */
+body {
+  background: linear-gradient(160deg, var(--color-bg-light), var(--color-bg-dark));
+  color: var(--color-text);
+  font-family: var(--font-base);
+  overflow-x: hidden;
+}
+
+/* ======================
+ Sección Hero - Animada con AOS y potenciable con GSAP
+====================== */
+.hero-section {
+  padding: 60px 20px;
+  background: radial-gradient(circle at center, #12162b 0%, var(--color-bg-light) 100%);
+  text-align: center;
+  position: relative;
+}
+
+.hero-section h1, 
+.hero-section h2, 
+.hero-section h3 {
+  color: #dce3f4;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-section .highlight-text {
+  color: var(--color-accent);
+}
+
+/* Efecto de entrada: atributos AOS (se activan desde JS al hacer scroll) */
+.hero-section[data-aos] {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.6s ease-out;
+}
+
+/* ======================
+ Navbar Mejorada (override Bootstrap)
+====================== */
+.navbar {
+  background-color: var(--color-bg-light) !important;
+  border-bottom: 2px solid var(--color-accent);
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: #f0f0f0 !important;
+  transition: color 0.3s;
+}
+
+.navbar .nav-link:hover {
+  color: var(--color-accent) !important;
+}
+
+/* ======================
+ Botones Estilizados y Animados
+ (Compatible con Animate.css y potenciables mediante Velocity.js)
+====================== */
+.btn {
+  border-radius: 30px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px var(--color-accent);
+}
+
+/* Botón Primario */
+.btn-primary {
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  box-shadow: 0 0 12px rgba(37, 110, 255, 0.5);
+}
+
+/* ======================
+ Logo del Servidor - Animaciones con Mo.js
+====================== */
+.server-logo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid var(--color-accent);
+  box-shadow: 0 0 10px #3a9fd9;
+  object-fit: cover;
+  margin-bottom: 20px;
+  animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* ======================
+ Estado del Servidor - Panel Interactivo
+====================== */
+.server-status-section {
+  background: radial-gradient(circle at center, #11172a 0%, #0b0d20 100%);
+  padding: 60px 20px;
+  position: relative;
+}
+
+.server-status-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 35, 0.3);
+  pointer-events: none;
+}
+
+/* ======================
+ Footer Elegante y Responsive
+====================== */
+footer {
+  background-color: var(--color-bg-light);
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+}
+
+footer .brand-footer {
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+/* ======================
+ Componentes Extra para Comunidad de Role Play
+====================== */
+
+/* Chat Box para conversaciones en Role Play */
+.chat-box {
+  background-color: #1e243a;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 15px;
+  max-width: 600px;
+  margin: 20px auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.chat-box .message {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  position: relative;
+  animation: slideIn 0.5s ease-out;
+}
+
+.chat-box .message.user {
+  background-color: #2d3b55;
+  align-self: flex-start;
+}
+
+.chat-box .message.admin {
+  background-color: #1b2637;
+  align-self: flex-end;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Modal para eventos y reuniones role play */
+.modal-roleplay {
+  display: none;
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 600px;
+  background-color: #0a0a23;
+  border: 2px solid var(--color-accent);
+  border-radius: 15px;
+  padding: 20px;
+  z-index: 1050;
+  animation: fadeInModal 0.4s both;
+}
+
+@keyframes fadeInModal {
+  from { opacity: 0; transform: translate(-50%, -45%); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+/* Overlay para modal */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1040;
+}
+
+/* Botón para abrir modal */
+.open-modal-btn {
+  margin: 20px;
+}
+
+/* ======================
+ Tarjetas de Perfil y Membresía
+====================== */
+.profile-card {
+  background: #1c1f2e;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+}
+
+.profile-card .card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.profile-card .card-body {
+  padding: 15px;
+  color: #dce3f4;
+}
+
+.profile-card .card-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* ======================
+ Animaciones Personalizadas para Role Play
+====================== */
+
+/* Animación de entrada para elementos destacados */
+.animate-fade {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Efectos de parpadeo para alertas en el juego */
+.pulse-alert {
+  animation: pulseAlert 1.5s infinite;
+}
+
+@keyframes pulseAlert {
+  0% { box-shadow: 0 0 0 0 rgba(92, 201, 255, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(92, 201, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(92, 201, 255, 0); }
+}
+
+/* Utilidades para margen y padding */
+.mt-10 { margin-top: 10px !important; }
+.mb-10 { margin-bottom: 10px !important; }
+.pt-10 { padding-top: 10px !important; }
+.pb-10 { padding-bottom: 10px !important; }
+
+/* ======================
+ Diseño Responsive y Media Queries
+====================== */
+@media (max-width: 992px) {
+  .hero-section {
+      padding: 40px 10px;
+  }
+  .chat-box {
+      margin: 10px;
+      width: calc(100% - 20px);
+  }
+  .profile-card {
+      margin: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar .nav-link {
+      font-size: 0.9rem;
+  }
+  .hero-section h1 {
+      font-size: 2rem;
+  }
+}
+
+/* ======================
+ Integración de Efectos de GSAP, Velocity.js y Mo.js
+ (Los efectos se activan mediante JavaScript; aquí se definen estilos base)
+====================== */
+.gsap-slide-in {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+.velocity-bounce {
+  /* Estilos base para efectos Bounce (Velocity.js) */
+  transform: scale(0.95);
+}
+
+.mo-rotate {
+  /* Estilos base para efectos de rotación (Mo.js) */
+  transform: rotate(0deg);
+  transition: transform 0.5s ease-out;
+}
+
+.mo-rotate:hover {
+  transform: rotate(360deg);
+}
+
+/* ======================
+ Utilidades y Clases Diversas
+====================== */
+.text-center { text-align: center !important; }
+.text-right { text-align: right !important; }
+.text-left { text-align: left !important; }
+.font-bold { font-weight: bold !important; }
+.font-italic { font-style: italic !important; }
+
+/* Clases para espaciado */
+.mt-20 { margin-top: 20px !important; }
+.mb-20 { margin-bottom: 20px !important; }
+.pt-20 { padding-top: 20px !important; }
+.pb-20 { padding-bottom: 20px !important; }
+
+/* ======================
+ Efectos Hover y Transiciones Extra
+====================== */
+.hover-glow:hover {
+  box-shadow: 0 0 15px var(--color-accent);
+  transition: box-shadow 0.3s ease;
+}
+
+.transition-smooth {
+  transition: all 0.4s ease;
+}
+
+.transform-scale {
+  transform: scale(1);
+}
+
+.transform-scale:hover {
+  transform: scale(1.02);
+}
+
+/* ======================
+ Clases Específicas para Elementos Role Play
+====================== */
+
+/* Panel de misiones (quests) */
+.quest-panel {
+  background: #1f2739;
+  border-left: 4px solid var(--color-accent);
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 6px;
+}
+
+.quest-panel h4 {
+  margin-bottom: 10px;
+  color: var(--color-accent);
+}
+
+/* Registro de actividad en el juego */
+.activity-log {
+  background: #121822;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #b0b0b0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.activity-log::-webkit-scrollbar {
+  width: 8px;
+}
+
+.activity-log::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+  border-radius: 4px;
+}
+
+/* ======================
+ Estilos para Formularios e Inputs Personalizados
+====================== */
+.form-control {
+  background-color: #1a1d2e;
+  border: 1px solid #333;
+  color: #e0e0e0;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.form-control:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 8px rgba(92, 201, 255, 0.4);
+  outline: none;
+}
+
+/* ======================
+ Elementos Interactivos y Tooltips
+====================== */
+.tooltip-custom {
+  position: relative;
+  cursor: pointer;
+}
+
+.tooltip-custom::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: opacity 0.3s;
+  font-size: 0.8rem;
+}
+
+.tooltip-custom:hover::after {
+  opacity: 1;
+}
+
+/* ======================
+ Efectos de Fondo con Efecto Parallax
+====================== */
+.parallax-bg {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+/
+

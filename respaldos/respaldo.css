@@ -1,0 +1,125 @@
+/* ======================
+   Estilos Globales
+====================== */
+body {
+    background: linear-gradient(160deg, #0a0a23, #0f1129);
+    color: #e0e0e0;
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* ======================
+     Hero Section
+  ====================== */
+  .hero-section {
+    padding: 40px 20px;
+    background: radial-gradient(circle at center, #12162b 0%, #0a0a23 100%);
+    text-align: center;
+  }
+  
+  /* ======================
+     Títulos y texto destacado
+  ====================== */
+  h1, h2, h3 {
+    color: #dce3f4;
+    font-weight: 700;
+  }
+  .highlight-text {
+    color: #5cc9ff;
+  }
+  
+  /* ======================
+     Navbar
+  ====================== */
+  .navbar {
+    background-color: #0a0a23;
+  }
+  .navbar-brand,
+  .nav-link {
+    color: #f0f0f0;
+  }
+  .nav-link:hover {
+    color: #5cc9ff;
+  }
+  
+  /* ======================
+     Botones
+  ====================== */
+  .btn {
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #5cc9ff;
+  }
+  
+  /* ======================
+     Logo del servidor
+  ====================== */
+  .server-logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #5cc9ff;
+    box-shadow: 0 0 10px #3a9fd9;
+    object-fit: cover;
+    animation: pulse 3s infinite;
+    margin-bottom: 20px;
+  }
+  
+  /* Animación suave al logo */
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+  
+  /* ======================
+     Estado del servidor
+  ====================== */
+  .server-status-section {
+    background: radial-gradient(circle at center, #11172a 0%, #0b0d20 100%);
+    padding: 60px 20px;
+  }
+  
+  /* ======================
+     Footer
+  ====================== */
+  footer {
+    background-color: #0a0a23;
+    color: #ccc;
+    text-align: center;
+    padding: 20px;
+  }
+  footer .brand-footer {
+    color: #5cc9ff;
+    font-weight: bold;
+  }
+
+  .btn-primary {
+    background-color: #256eff;
+    border-color: #256eff;
+  }
+  .btn-primary:hover {
+    background-color: #1a4ccc;
+    border-color: #1a4ccc;
+    box-shadow: 0 0 10px rgba(80, 144, 255, 0.4);
+  }
+
+  
+  .btn-primary {
+    background-color: #256eff;
+    border-color: #256eff;
+  }
+  .btn-primary:hover {
+    background-color: #1e4ecf;
+    border-color: #1e4ecf;
+    box-shadow: 0 0 12px rgba(37, 110, 255, 0.5);
+  }
+  

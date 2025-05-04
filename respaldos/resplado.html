@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RUNT Me Colombia - Consulta</title>
+  <link rel="icon" type="image/png" href="https://images-ext-1.discordapp.net/external/2FCH5fBcRQXY65cPY-_zdCKnzTuycQvievwowjELfU8/%3Fsize%3D4096/https/cdn.discordapp.com/icons/1238563355875217430/a_c484181cf18d9c5aa7b0dc3bd47d2a72.gif">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #001f3f, #0074D9);
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding-bottom: 100px;
+    }
+    header {
+      background-color: #001f3f;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 2px solid #0074D9;
+    }
+    header img {
+      height: 50px;
+    }
+    .container-main {
+      max-width: 850px;
+      margin: 2rem auto;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(0, 116, 217, 0.3);
+    }
+    #resultadoConsulta {
+      margin-top: 2rem;
+      background-color: #ffffffee;
+      color: #111;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    .info-card p {
+      font-size: 1.1rem;
+      margin: 0.8rem 0;
+    }
+    .emoji {
+      font-size: 1.5rem;
+      margin-right: 0.5rem;
+    }
+    .btn-custom {
+      background-color: #0074D9;
+      color: white;
+      border-radius: 12px;
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h3>Me Colombia ER:LC </h3>
+    <img src="https://cdn.discordapp.com/icons/1238563355875217430/a_c484181cf18d9c5aa7b0dc3bd47d2a72.gif?size=4096" alt="Logo RP">
+  </header>
+
+  <div class="container container-main">
+    <h2 class="text-center">🔍 Consulta Vehicular</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <label>Placa:</label>
+        <input id="placa" class="form-control" type="text">
+      </div>
+      <div class="col-md-6">
+        <label>Documento:</label>
+        <input id="documento" class="form-control" type="text">
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <button onclick="consultarVehiculo()" class="btn btn-custom">Consultar</button>
+    </div>
+
+    <div id="resultadoConsulta" style="display:none">
+      <h4 class="text-center">📄 Resultado de la Consulta</h4>
+      <div class="info-card">
+        <p>👤 <strong>Nombre:</strong> <span id="nombre"></span></p>
+        <p>📛 <strong>Apellido:</strong> <span id="apellido"></span></p>
+        <p>🚘 <strong>Placa:</strong> <span id="placaRes"></span></p>
+        <p>🚗 <strong>Modelo:</strong> <span id="modelo"></span></p>
+        <p>📜 <strong>SOAT:</strong> <span id="soat"></span></p>
+        <p>🔧 <strong>Tecnomecánica:</strong> <span id="tecno"></span></p>
+      </div>
+      <div class="text-center">
+        <button onclick="generarPDF()" class="btn btn-custom">Descargar PDF 📥</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const nombres = ["Carlos", "Laura", "Miguel", "Tatiana", "Andrés"];
+    const apellidos = ["Gómez", "Rodríguez", "Martínez", "Sánchez", "Moreno"];
+    const modelos = ["Mazda 3", "Renault Logan", "Toyota Corolla", "Chevrolet Spark", "Kia Rio"];
+
+    function consultarVehiculo() {
+      document.getElementById('nombre').textContent = nombres[Math.floor(Math.random()*nombres.length)];
+      document.getElementById('apellido').textContent = apellidos[Math.floor(Math.random()*apellidos.length)];
+      document.getElementById('modelo').textContent = modelos[Math.floor(Math.random()*modelos.length)];
+      document.getElementById('placaRes').textContent = document.getElementById('placa').value;
+      document.getElementById('soat').textContent = 'Vigente ✅';
+      document.getElementById('tecno').textContent = 'Vigente ✅';
+      document.getElementById('resultadoConsulta').style.display = 'block';
+    }
+
+    async function generarPDF() {
+      const resultado = document.getElementById('resultadoConsulta');
+      const { jsPDF } = window.jspdf;
+      const canvas = await html2canvas(resultado, { scale: 2 });
+      const imgData = canvas.toDataURL('image/png');
+      const pdf = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'letter' });
+      const pageWidth = pdf.internal.pageSize.getWidth();
+      const pageHeight = pdf.internal.pageSize.getHeight();
+
+      // Fondo azul oscuro
+      pdf.setFillColor(0, 31, 63);
+      pdf.rect(0, 0, pageWidth, pageHeight, 'F');
+
+      // Imagen recortada desde html
+      const imgProps = pdf.getImageProperties(imgData);
+      const pdfWidth = pageWidth - 40;
+      const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+      pdf.addImage(imgData, 'PNG', 20, 30, pdfWidth, pdfHeight);
+
+      pdf.setTextColor(255, 255, 255);
+      pdf.setFontSize(10);
+      pdf.text('Generado por RUNT MEDELLIN  - ME Colombia ER:LC🇨🇴', pageWidth / 2, pageHeight - 10, { align: 'center' });
+      pdf.save('consulta_vehicular.pdf');
+    }
+  </script>
+  <footer style="background-color: #0074D9,  #4ea1f3 ; color: white; text-align: center; padding: 20px 0;">
+    <p>&copy; Me Colombia ER:LC | Todos los derechos reservados</p>
+    
+    <!-- Enlaces con iconos -->
+    <div style="margin-top: 10px;">
+        <a href="https://discord.gg/mecolombia" target="_blank">
+            <img src="https://img.icons8.com/?size=48&id=30998&format=png" alt="Discord" style="width: 40px; height: 40px; margin-right: 10px;">
+        </a>
+        <a href="https://www.tiktok.com/@me_colombiarp" target="_blank">
+            <img src="https://img.icons8.com/?size=40&id=DsrpRmRe9D0f&format=png" alt="TikTok" style="width: 40px; height: 40px; margin-right: 10px;">
+        </a>
+        <a href="https://medellin-colombia-rp.gitbook.io/me-colombia-rp" target="_blank">
+            <img src="https://img.icons8.com/?size=48&id=80585&format=png" alt="Blog" style="width: 40px; height: 40px;">
+        </a>
+    </div>
+</footer>
+  
+</body>
+</html>

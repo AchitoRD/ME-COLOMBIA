@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tienda - Me Colombia RP ER:LC</title>
+  <link rel="icon" type="image/png" href="https://cdn.discordapp.com/attachments/1359662313552085072/1368380752126939297/ME-COLOMBIA-NEGATIVO.png?ex=68180362&is=6816b1e2&hm=a482b20c636b348af7ab7b3a7bb41b262c3d97331aa3264dca122d673ef6ae47&">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      background-color: #121212;
+      color: white;
+    }
+
+    .neon-text {
+      color: #ffffff;
+      text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff;
+    }
+
+    .card-title {
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .card-title:hover {
+      color: #00f7ff;
+    }
+
+    .info-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease, padding 0.3s;
+      padding: 0;
+    }
+
+    .info-content.show {
+      max-height: 500px;
+      padding-top: 15px;
+    }
+
+    .btn-comprar {
+      background-color: #00f7ff;
+      border: none;
+      color: #000;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn-comprar:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #00f7ff;
+      background-color: #00e0e0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Menú -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="https://cdn.discordapp.com/attachments/1359662313552085072/1368380752126939297/ME-COLOMBIA-NEGATIVO.png?ex=68180362&is=6816b1e2&hm=a482b20c636b348af7ab7b3a7bb41b262c3d97331aa3264dca122d673ef6ae47&" alt="Logo Me Colombia RP" style="height: 35px; width: auto; margin-right: 10px;">
+          <span class="neon-text">ME Colombia RP ER:LC</span>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="documentacion.html">Documentación</a></li>
+            <li class="nav-item"><a class="nav-link" href="informacion.html">Información</a></li>
+            <li class="nav-item"><a class="nav-link" href="staff.html">Staff</a></li>
+            <li class="nav-item"><a class="nav-link" href="redes.html">Redes</a></li>
+            <li class="nav-item"><a class="nav-link active" href="tienda.html">Tienda</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Sección Tienda -->
+  <main class="container my-5">
+    <h2 class="text-center neon-text">Tienda</h2>
+    <p class="text-center text-white">Explora y adquiere artículos exclusivos para nuestra comunidad.</p>
+
+    <div class="row g-4 mt-4">
+
+      <!-- Membresía Elite -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card bg-dark text-white">
+          <img src="https://media.discordapp.net/attachments/1238738503471337472/1368414443570200689/blurple_gift35.png?ex=681822c3&is=6816d143&hm=648d70f8ed7c371ca49ed3abe5a37545836ba079b2355e935be8e014d2768500&=&format=webp&quality=lossless" class="card-img-top" alt="Elite">
+          <div class="card-body text-center">
+            <h5 class="card-title toggle-info" data-target="#elite-info">Membresía Elite</h5>
+            <div id="elite-info" class="info-content collapse">
+              <p>
+                Acceso al rol @・Membresia Élite<br>
+                Precio: 8.000 COP NEQUI<br>
+                - Chat exclusivo de rangos<br>
+                - TEC-9 legal<br>
+                - 30M cada 5 días<br>
+                - 2 trabajos principales<br>
+                - Coches de lujo (excepto Bugatti)<br>
+                - Quitar antecedentes<br>
+                - Eliminar 2 sanciones
+              </p>
+            </div>
+            <a href="https://tu-link-de-compra.com/elite" class="btn btn-comprar mt-3">Comprar</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Membresía Legendario -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card bg-dark text-white">
+            <img src="https://media.discordapp.net/attachments/1238738503471337472/1368414444148883558/argift.png?ex=681822c3&is=6816d143&hm=4e01d0b28cf6ac1d03a742150665dee9d93c65335f34121bc182d8dfd8cdfaa6&=&format=webp&quality=lossless" class="card-img-top" alt="Elite">
+          <div class="card-body text-center">
+            <h5 class="card-title toggle-info" data-target="#legendario-info">Membresía Legendario</h5>
+            <div id="legendario-info" class="info-content collapse">
+              <p>
+                Acceso al rol @・Membresía Legendario<br>
+                Precio: 18.000 COP NEQUI<br>
+                - Chat exclusivo de rangos<br>
+                - AK-47 legal<br>
+                - 80M cada 7 días<br>
+                - 3 trabajos principales<br>
+                - Todos los vehículos de lujo<br>
+                - Eliminar antecedentes<br>
+                - Eliminar 3 sanciones<br>
+                - Personalización (spam, anuncio, emoji o sonido)<br>
+                - Beneficios en rol criminal
+              </p>
+            </div>
+            <a href="https://tu-link-de-compra.com/legendario" class="btn btn-comprar mt-3">Comprar</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Membresía Luxury -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card bg-dark text-white">
+          <img src="https://media.discordapp.net/attachments/1238738503471337472/1368414444392288306/emoji39.png?ex=681822c3&is=6816d143&hm=54bc17d3d5f5286f2ed73b3fd9c3ea1a3a67cd56fa14aa435b12a0bcab552cec&=&format=webp&quality=lossless" class="card-img-top" alt="Luxury">
+          <div class="card-body text-center">
+            <h5 class="card-title toggle-info" data-target="#luxury-info">Membresía Luxury</h5>
+            <div id="luxury-info" class="info-content collapse">
+              <p>
+                Acceso al rol @・Membresía Luxury<br>
+                Precio: 130K COP / 30 USD (Nequi o Paypal)<br>
+                - AK y TEC permanentes<br>
+                - 120M cada 7 días<br>
+                - Entrada directa al STAFF<br>
+                - Todos los vehículos de +400K LEGAL<br>
+                - Imágenes en todos los canales<br>
+                - 4 trabajos principales y 4 secundarios<br>
+                - x2 dinero en trabajos rápidos<br>
+                - Chat exclusivo con fundación y staff<br>
+                - +10% en robos<br>
+                - Prioridad en tickets<br>
+                - Eliminar 4 sanciones y 1 baneo<br>
+                - Entrada a COPES para 2 personas<br>
+                - Membresía permanente<br>
+                - Whitelist antiflood bot
+              </p>
+            </div>
+            <a href="https://tu-link-de-compra.com/luxury" class="btn btn-comprar mt-3">Comprar</a>
+          </div>
+        </div>
+      </div>
+
+  
+
+    </div>
+  </main>
+
+  <footer class="text-center py-3 bg-dark text-white">
+    &copy; 2025 Me Colombia RP ER:LC. Todos los derechos reservados.
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.querySelectorAll('.toggle-info').forEach(title => {
+      title.addEventListener('click', () => {
+        const target = document.querySelector(title.getAttribute('data-target'));
+        if (target.classList.contains('show')) {
+          target.classList.remove('show');
+        } else {
+          document.querySelectorAll('.info-content').forEach(el => el.classList.remove('show'));
+          target.classList.add('show');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
