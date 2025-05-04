@@ -1,89 +1,36 @@
+🔴🟡🟢  
+# ME COLOMBIA RP ⎯ 🚔
 
+Este proyecto es el sitio web oficial de **ME COLOMBIA RP**, una comunidad dedicada al roleplay. Aquí encontrarás la página de inicio, tienda, staff, redes y mucho más.
 
-```markdown
-# 🇨🇴 ME COLOMBIA RP - Sitio Web Oficial 🚔
+🖥️ **Tecnologías utilizadas**
 
-¡Bienvenido al repositorio del sitio web oficial de **ME COLOMBIA RP**!  
-Este proyecto incluye las distintas secciones de nuestra comunidad: inicio, tienda, staff, redes, documentación y más.
+- **HTML5** 📄
+- **CSS3** 🎨
+- **JavaScript** ⚙️
+- **Variables de entorno** `.env` 🔐
 
----
+📁 **Archivos del Proyecto**  
+Este proyecto contiene los siguientes archivos:
 
-## ✅ Archivos agregados
+1. `.env`  
+2. `css/style.css`
+3. `documentacion.html`
+4. `index.html`
+5. `index.js`
+6. `informacion.html`
+7. `js/main.js`
+8. `prueba.html`
+9. `redes.html`
+10. `respaldos/respaldo.css`
+11. `respaldos/respaldo.html`
+12. `respaldos/respaldo2.html`
+13. `respaldos/resplado.html`
+14. `staff.html`
+15. `tienda.html`
 
-Se realizaron **15 cambios** con **2161 líneas nuevas**:
+🚀 **Cómo Iniciar**
 
-- 🔐 `.env`
-- 🎨 `css/style.css`
-- 🧾 `documentacion.html`
-- 🏠 `index.html`
-- 🧠 `index.js`
-- ℹ️ `informacion.html`
-- ⚙️ `js/main.js`
-- 🧪 `prueba.html`
-- 📱 `redes.html`
-- 💾 `respaldos/respaldo.css`
-- 📄 `respaldos/respaldo.html`
-- 📄 `respaldos/respaldo2.html`
-- 📄 `respaldos/resplado.html`
-- 👮 `staff.html`
-- 🛒 `tienda.html`
-
----
-
-## 🧰 Tecnologías utilizadas
-
-- HTML5 📄  
-- CSS3 🎨  
-- JavaScript ⚙️  
-- Variables de entorno `.env` 🔐
-
----
-
-## 📂 Estructura del proyecto
-
-```
-
-ME-COLOMBIA/
-├── .env
-├── css/
-│   └── style.css
-├── js/
-│   └── main.js
-├── respaldos/
-│   ├── respaldo.css
-│   ├── respaldo.html
-│   ├── respaldo2.html
-│   └── resplado.html
-├── index.html
-├── index.js
-├── documentacion.html
-├── informacion.html
-├── prueba.html
-├── redes.html
-├── staff.html
-└── tienda.html
-
-````
-
----
-
-## 🚀 Cómo iniciar
-
-1. Clona el repositorio:
+1. Clona el repositorio con el siguiente comando:
    ```bash
    git clone https://github.com/AchitoRD/ME-COLOMBIA.git
-````
-
-2. Abre `index.html` en tu navegador.
-3. Personaliza según tus necesidades.
-
----
-
-## 🙌 Créditos
-
-Desarrollado con ❤️ por [AchitoRD](https://github.com/AchitoRD)
-Gracias por apoyar a la comunidad de **ME COLOMBIA RP** 🇨🇴
-
-```
-
----
