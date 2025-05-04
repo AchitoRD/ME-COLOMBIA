@@ -1,52 +1,45 @@
-# ME-COLOMBIA
 
-
----
 
 ```markdown
 # 🇨🇴 ME COLOMBIA RP - Sitio Web Oficial 🚔
 
 ¡Bienvenido al repositorio del sitio web oficial de **ME COLOMBIA RP**!  
-Este proyecto contiene las páginas públicas, de documentación, tienda, staff y mucho más para la comunidad de Roleplay.
+Este proyecto incluye las distintas secciones de nuestra comunidad: inicio, tienda, staff, redes, documentación y más.
 
 ---
 
-## 📁 Archivos agregados recientemente
+## ✅ Archivos agregados
 
-Se han realizado **15 cambios** con **2161 líneas nuevas** ✨:
+Se realizaron **15 cambios** con **2161 líneas nuevas**:
 
-```
-
-🟢 .env
-🎨 css/style.css
-🧾 documentacion.html
-🏠 index.html
-🧠 index.js
-ℹ️ informacion.html
-⚙️ js/main.js
-🧪 prueba.html
-📱 redes.html
-💾 respaldos/respaldo.css
-📄 respaldos/respaldo.html
-📄 respaldos/respaldo2.html
-📄 respaldos/resplado.html
-👮 staff.html
-🛒 tienda.html
-
-```
+- 🔐 `.env`
+- 🎨 `css/style.css`
+- 🧾 `documentacion.html`
+- 🏠 `index.html`
+- 🧠 `index.js`
+- ℹ️ `informacion.html`
+- ⚙️ `js/main.js`
+- 🧪 `prueba.html`
+- 📱 `redes.html`
+- 💾 `respaldos/respaldo.css`
+- 📄 `respaldos/respaldo.html`
+- 📄 `respaldos/respaldo2.html`
+- 📄 `respaldos/resplado.html`
+- 👮 `staff.html`
+- 🛒 `tienda.html`
 
 ---
 
-## 🛠️ Tecnologías utilizadas
+## 🧰 Tecnologías utilizadas
 
-- **HTML5** 📄
-- **CSS3** 🎨
-- **JavaScript** ⚙️
-- **Entorno `.env`** para variables de configuración 🔐
+- HTML5 📄  
+- CSS3 🎨  
+- JavaScript ⚙️  
+- Variables de entorno `.env` 🔐
 
 ---
 
-## 🧪 Estructura del proyecto
+## 📂 Estructura del proyecto
 
 ```
 
@@ -65,6 +58,7 @@ ME-COLOMBIA/
 ├── index.js
 ├── documentacion.html
 ├── informacion.html
+├── prueba.html
 ├── redes.html
 ├── staff.html
 └── tienda.html
@@ -80,17 +74,16 @@ ME-COLOMBIA/
    git clone https://github.com/AchitoRD/ME-COLOMBIA.git
 ````
 
-2. Abre el proyecto en tu navegador con `index.html`.
-3. Personaliza las páginas y estilos según necesites.
+2. Abre `index.html` en tu navegador.
+3. Personaliza según tus necesidades.
 
 ---
 
-## ❤️ Créditos
+## 🙌 Créditos
 
-Proyecto creado y mantenido por [AchitoRD](https://github.com/AchitoRD)
-¡Gracias por apoyar la comunidad de ME COLOMBIA RP! 🇨🇴✨
+Desarrollado con ❤️ por [AchitoRD](https://github.com/AchitoRD)
+Gracias por apoyar a la comunidad de **ME COLOMBIA RP** 🇨🇴
 
 ```
 
 ---
-
